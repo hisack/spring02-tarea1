@@ -11,11 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.programacion")
 public class Config {
 
-//    @Bean //es @Bean en vez de @Produces
-//    public ServicioLog createLog(){
-//        System.out.println("PRODUCTOR ServicioLogProducer");
-//        return new ServicioLogImpl(); //retorna una instancia del componente q vamos a crear
-//    }
+    private int num1=5;
+    private  int num2=90;
 
-
+    public int getNum1() {
+        return num1;
+    }
+    public int getNum2() {
+        return num2;
+    }
 }
