@@ -1,8 +1,5 @@
 package com.programacion.config;
 
-import com.programacion.servicios.ServicioLog;
-import com.programacion.servicios.ServicioLogImpl;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.programacion")
 public class Config {
 
-    private int num1=5;
-    private  int num2=90;
+    private int num1=15;
+    private  int num2=40;
 
     public int getNum1() {
         return num1;

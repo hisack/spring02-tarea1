@@ -15,25 +15,21 @@ import java.io.PrintWriter;
 
 @Component("sumarHandler")
 public class SumarHandler implements HttpRequestHandler {
-
     @Autowired
     private Operaciones servicio;
-
     @Autowired
     private Config config;
-
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        //handleRequest manejar la peticion , no permite trabajar con la peticion
-        //me propocionan diferentes metodos para manejar peticiones
-        //con request tiene informacion de la peticion.
-
+        /*Procesar la solicitud dada, generando una respuesta.
+         *request - solicitud HTTP actual
+         * response - Respuesta HTTP actual */
         int ret = servicio.sumar(config.getNum1(), config.getNum2());
         PrintWriter pw = resp.getWriter();
-        resp.setContentType("text/html");//
-        pw.printf("la suma es: %d", ret);
+        resp.setContentType("text/html");
+        pw.printf("La suma es: %d", ret);
 
     }
-
-
+    //handleRequest maneja la peticion, nos permite trabajar con la peticion
+    //request tiene informacion de la peticion.
 }
